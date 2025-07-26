@@ -26,9 +26,11 @@ class Veiculo {
 class Carro extends Veiculo {
   constructor(nome, tipoMotor, arcondicionado) {
     super(nome, tipoMotor, 4);
+    // INSERE MAIS UM ATRIBUTO AO CARRO
     this.arcondicionado = arcondicionado;
   }
 
+  // VERIFICA SE O OPCIONAL ESTA LIGADO OU NAO
   opcionais() {
     if (this.arcondicionado) {
       console.log("Arcondicionado ligado: Sim");
@@ -54,6 +56,7 @@ console.log("");
 const carroC = new Carro("Fox", 0, false);
 carroC.acelerar();
 carroC.opcionais();
+
 console.log("");
 console.log("----- ACELERANDO A MOTO-----");
 console.log("");
@@ -70,6 +73,7 @@ console.log("");
 const carroE = new Carro("BMW", 1, true);
 carroE.acelerar();
 carroE.opcionais();
+
 console.log("");
 console.log("----- ACELERANDO A MOTO-----");
 console.log("");
