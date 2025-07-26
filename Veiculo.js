@@ -24,8 +24,17 @@ class Veiculo {
 
 // CLASSE CARRO
 class Carro extends Veiculo {
-  constructor(nome, tipoMotor) {
+  constructor(nome, tipoMotor, arcondicionado) {
     super(nome, tipoMotor, 4);
+    this.arcondicionado = arcondicionado;
+  }
+
+  opcionais() {
+    if (this.arcondicionado) {
+      console.log("Arcondicionado ligado: Sim");
+    } else {
+      console.log("Arcondicionado ligado: Não");
+    }
   }
 }
 
@@ -42,8 +51,9 @@ console.log("");
 
 console.log("----- ACELERANDO O CARRO -----");
 console.log("");
-const carroC = new Carro("Fox", 0);
+const carroC = new Carro("Fox", 0, false);
 carroC.acelerar();
+carroC.opcionais();
 console.log("");
 console.log("----- ACELERANDO A MOTO-----");
 console.log("");
@@ -57,9 +67,9 @@ console.log("===========VEÍCULOS ELÉTRICOS===========");
 console.log("");
 console.log("----- ACELERANDO O CARRO-----");
 console.log("");
-const carroE = new Carro("BMW", 1);
+const carroE = new Carro("BMW", 1, true);
 carroE.acelerar();
-
+carroE.opcionais();
 console.log("");
 console.log("----- ACELERANDO A MOTO-----");
 console.log("");
